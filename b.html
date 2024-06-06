@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-Tech Neon Animation with Binary Numbers</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #binary-container {
+            color: #0f0;
+            font-size: 2rem;
+            white-space: nowrap;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .binary {
+            animation: glow 1s infinite alternate, fall 5s linear infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+            }
+            100% {
+                text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+            }
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="binary-container"></div>
+    <h2>We are sorry </h2>
+    <div id="binary-container"></div>
+    <script>
+        const container = document.getElementById('binary-container');
+        const binaryChars = ['0', '1'];
+
+        function getRandomBinary() {
+            return binaryChars[Math.floor(Math.random() * binaryChars.length)];
+        }
+
+        function createBinarySpan() {
+            const span = document.createElement('span');
+            span.className = 'binary';
+            span.textContent = getRandomBinary();
+            span.style.animationDelay = `${Math.random() * 5}s`;
+            span.style.fontSize = `${Math.random() * 1.5 + 1.5}rem`;
+            container.appendChild(span);
+        }
+
+        function generateBinaryRain() {
+            for (let i = 0; i < 500; i++) {
+                createBinarySpan();
+            }
+        }
+
+        generateBinaryRain();
+    </script>
+</body>
+</html>
