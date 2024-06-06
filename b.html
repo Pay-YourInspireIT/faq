@@ -12,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 1000px;
+            height: 1000px; /* Changed height to 1000px as per your input */
             width: 100vw;
             font-family: 'Courier New', Courier, monospace;
         }
@@ -51,13 +51,40 @@
                 transform: translateY(-100%);
             }
             100% {
-                transform: translateY(500vh);
+                transform: translateY(100vh); /* Adjusted fall distance */
+            }
+        }
+
+        /* New CSS for the centered spooky text */
+        #centered-text {
+            position: absolute;
+            z-index: 2;
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+            font-size: 3rem;
+            font-family: 'Creepster', 'Courier New', Courier, monospace;
+            text-align: center;
+            animation: blink 1.5s infinite alternate;
+            white-space: nowrap;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+            }
+            100% {
+                opacity: 0.5;
+                text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000;
             }
         }
     </style>
+    <!-- Link to the Creepster font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="binary-container"></div>
+    <div id="centered-text">Noop! You are not going</div>
 
     <script>
         const container = document.getElementById('binary-container');
