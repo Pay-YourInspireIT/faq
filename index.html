@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>FAQ | Your Inspire IT</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend+Deca:wght@100..900&family=Playwrite+IT+Moderna:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Voces&display=swap" rel="stylesheet"> 
@@ -14,14 +14,15 @@
 *{
   margin: 0;
   padding: 0;
-  
   box-sizing: border-box;
 }
 
 body{
     margin: 0 auto;
-    background: #f4f4f4;
+   
 	font-family: "Jost", sans-serif; 
+	 line-height: 1.6;
+    background: #000;
 }
 
 .header{
@@ -42,7 +43,7 @@ nav{
 }
 
 nav img{
-  width: 140px;
+  width: 250px;
 }
 
 .nav-links{
@@ -60,7 +61,7 @@ nav img{
 .nav-links ul li a{
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 20px;
 	font-family: "Voces", sans-serif; 
 }
 
@@ -123,13 +124,6 @@ nav img{
   color: black;
   transition: 1s;
 }
-
-
-
-
-
-
-
 
 
 
@@ -272,217 +266,119 @@ footer p {
   
 
 
-@media(max-width: 710px){
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Encode Sans Condensed', sans-serif;
-    box-sizing: border-box;
-}
 
-body {
-    margin: 0 auto;
-    background: #f4f4f4;
-	font-family: "Jost", sans-serif; 
-}
 
-/* Header styles */
-.header {
-    height: 250px; /* Adjusted height for better mobile view */
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://i.postimg.cc/vBwWdFKr/Banner-yi.jpg);
-    background-position: center;
-    position: relative;
-}
 
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
 
-nav img {
-    width: 100px; /* Adjusted logo size for better mobile view */
-}
 
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
 
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.nav-links ul li::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #00ff03;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-}
-
-.text-box {
-    width: 90%;
-    color: #fff;
+.fr{
+    bottom: 0;
+    left: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
 }
 
-.text-box h1 {
-    font-size: 24px; /* Adjusted font size for better mobile view */
-    padding-bottom: 20px; /* Adjusted padding for better mobile view */
-}
 
-.text-box p {
-    margin: 10px 0 20px; /* Adjusted margin for better mobile view */
-    font-size: 12px; /* Adjusted font size for better mobile view */
-}
 
-/* Footer styles */
-footer {
-    background-color: #001427;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
-.left, .right {
-    display: inline-block;
-    vertical-align: top;
-}
+   
 
-.left {
-    margin-right: 20px; /* Adjusted margin-right for better mobile view */
-    margin-bottom: 20px; /* Move image downwards */
-}
+        main {
+            
+            margin: 20px auto;
+        }
 
-.right {
-    padding-left: 20px; /* Adjusted padding-left for better mobile view */
-    border-left: 2px solid #00ffc0; /* Blue line between image and links */
-}
+        .faq-section {
+            margin: 20px;
+            background-color: #fff;
+            border: 1px solid #00ff18;
+            border-radius: 8px;
+            padding: 20px;
+            transition: box-shadow 0.3s ease;
+            position: relative; /* Ensure relative positioning */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            border-right: 5px solid #15a1ff;
+            
+        }
 
-footer img {
-    max-width: 100%; /* Ensure image resizes properly on mobile */
-    height: auto;
-    display: block;
-    margin: 10px auto; /* Center image and add top and bottom margin */
-}
+        .faq-section:hover {
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            ;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+        }
 
-footer ul {
-    list-style: none;
-    padding: 0;
-}
+        .question {
+            font-size: 35px;
+            color: #333;
+            cursor: pointer;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
 
-footer ul li {
-    margin-bottom: 10px; /* Add space between list items */
-}
+        .question::after {
+            content: "ᐁ "; /* Content for the pseudo-element */
+            margin-left: auto; /* Pushes the ">" icon to the right */
+            font-size: 1.2rem;
+            color: #00ff03;
+            transition: transform 0.3s ease; /* Smooth transition for rotation */
+            display: inline-block; /* Ensure inline-block for transition */
+            transform-origin: center; /* Ensure rotation is centered */
+        }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: normal; /* Set initial font weight */ 
-    transition: font-weight 0.3s; 
-    font-size: 16px; /* Adjusted font size for better mobile view */
-}
+        .rotate::after {
+            transform: rotate(-90deg); /* Rotate the icon 90 degrees */
+        }
 
-/* Animated Hover Effect */
-footer a:hover {
-    animation: linkHover 0.5s ease-in-out forwards;
-    color: #00ff96;
-    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
-}
+        .question i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: #007bff; /* Blue color for the icon */
+        }
 
-@keyframes linkHover {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
+        .answer {
+            display: none; /* Hide answers by default */
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            margin-top: 10px;
+        }
 
-/* Neon Glow Effect */
-@keyframes neon {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
-    }
-}
-
-footer p {
-    animation: neon 1.5s ease-in-out infinite alternate;
-}
-
-/* Error page styles */
-.error {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-.error .container {
-    width: 80%;
-    max-width: 600px;
-    margin: 100px auto;
-    text-align: center;
-}
-
-.warning {
-    font-size: 24px;
-    color: #ff6347; /* Tomato color */
-    animation: blink 1s infinite alternate;
-    padding-bottom: 20px; /* Adjusted padding for better mobile view */
-}
-
-@keyframes blink {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-.error img {
+        .answer p {
+            margin: 0;
+            font-size: 28px;
+            color: #555;
+        }
+        
+        
+.faq-img{
     margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.faq-img img{
+    width: 60%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    max-width: 100%; /* Ensure image resizes properly on mobile */
+    border-radius: 30px;
+    box-shadow: 0 0 20px #fff, 0 0 20px #fff; 
 }
+        
 
-#error-heading {
-    font-size: 48px; /* Adjusted font size for better mobile view */
-    color: red;
-    padding: 20px 0; /* Adjusted padding for better mobile view */
+
+
+
+
+
+
+
+.sh{
+    color: #fff;
+    display: none;
 }
-
-
-}
-
 
 
 
@@ -500,6 +396,8 @@ footer p {
 			      <li><a href="https://yi-linkhub.github.io/Team-34">Group Joining</a></li>
 			      
 			    </ul>
+			    
+			    
 			     
 			  </div>
 			  
@@ -517,31 +415,53 @@ footer p {
 	
 
 </div>
+</nav>
  </section>
  
  
  
+ <div class="faq-img">
+     <img src="https://i.postimg.cc/L4BQVVf7/996f636e-fb42-48b1-a70d-e824b41144e9.jpg" alt="FAQ | Your Inspire IT" >
+ </div>
+ 
+ 
+ 
+ <main>
+        <section class="faq-section" onclick="toggleAnswer(this)">
+            <h2 class="question"><i class="fas fa-question-circle"></i> Question is Loading...</h2>
+            <div class="answer">
+                <p>Answer is Loading...</p>
+            </div>
+            
+            
+            
+            
+        </section>
+        
+        <section class="faq-section" onclick="toggleAnswer(this)">
+            <h2 class="question"><i class="fas fa-question-circle"></i> Question is Loading...</h2>
+            <div class="answer">
+                <p>Answer is Loading...</p>
+            </div>
+            
+            
+            
+            
+        </section>
+        <!-- Repeat the above section structure for each FAQ item -->
+    </main>
+ 
+ 
+ 
+ <h1 style=" color:#ff0a00; text-align: center; font-size: 30px;">This Page is Now Under Development !! </h1>
  
  
  
  
- <div class="error">
-    <img src="https://i.postimg.cc/qMNT5RyT/Cloud-connectivity.gif" alt="Loading..." style="height: 500px; align: center;">
-    <h2 id="h2">Error</h2>
-<div class="container">
-    
-    <h1>This Page is Under Maintenance</h1>
-    <p class="warning">Sorry for the inconvenience.</p>
-</div>
-
-</div>
+ <div class="sh">
+     hi my name is ali
+ </div>
  
- 
- 
- 
- 
- 
- <br><br><br><br><br>
  
  
  
@@ -566,5 +486,30 @@ footer p {
         </div><br>
         <p>© All Rights Reserved to Your Inspire IT 2022-2024</p>
     </footer></section>
+    
+    <script>
+         function toggleAnswer(section) {
+            // Find the answer element within the clicked FAQ section
+            const answer = section.querySelector('.answer');
+            
+            // Find the arrow icon element within the clicked FAQ section's question
+            const arrow = section.querySelector('.question::after');
+            
+            // Check if answer is found before proceeding
+            if (answer) {
+                // Toggle the display of the answer
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+                
+                // Toggle the rotation of the arrow icon
+                section.querySelector('.question').classList.toggle('rotate');
+            } else {
+                console.error('Answer element not found.');
+            }
+        }
+    </script>
 </body>
 </html>
